@@ -32,7 +32,8 @@ class testScrabbleSolver extends FlatSpec with Matchers {
         scrabblesolver.map1(("p", 2)).toList should be(List("oppression"))
         scrabblesolver.lookup("an") should be(List("an", "and"))
         scrabblesolver.lookup("and") should be(List("an", "and"))
-//        scrabblesolver.lookup("anxtrem") should be(List("an", "and", "extrem"))
+        scrabblesolver.lookup("ression",4) should be(List("aggression","an", "and"))
+//        scrabblesolver.lookup("anxtrem",4) should be(List("an", "and", "extrem"))
     }
 
     "A group" should "group a list of words" in {

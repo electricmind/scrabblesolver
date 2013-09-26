@@ -85,12 +85,12 @@ object scrabblesolver extends App {
         }).toList.sortBy(_._1)
     }
 
-    def lookup(letters: String) = {
+    def lookup(letters: String, gap : Int = 1) = {
         string2Keys(letters.split("").tail).map(map1).
             foldLeft(List[(String, Int)]())({
                 case (outcome: List[(String, Int)], x) => merge(outcome, x.toList.sorted, List())
             }).
-            filter({ case (w, n) => w.length >= n - 1 && w.length <= n + 1 }).
+            filter({ case (w, n) => w.length >= n - gap && w.length <= n + gap }).
             map(_._1)
     }
 
