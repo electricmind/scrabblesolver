@@ -1,7 +1,7 @@
 scrabblesolver
 ==============
 
-Scrabblesolver is a tool that make it easy to play scrabble. Tool treats a large text corpora to get a vocabulary and lately, for any combination of characters, prints a set of words, each contains these characters plus one character more.
+Scrabblesolver is a tool that make it easy to play scrabble. The tool treats a large text corpora to get a vocabulary and, after that, for any combination of characters, prints a set of words, each of them contains these characters plus one character more.
 
 	% scala scrabblesolver.scrabblesolver  corpora.txt
 	> nymph
